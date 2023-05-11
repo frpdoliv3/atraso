@@ -12,6 +12,7 @@ data class ScheduleInfo(
     val operator: String,
     val serviceType: String,
     val trainStatus: String,
+    val trainNumber: String,
     val trainPassageNodes: List<StopData>
 ) {
     companion object {

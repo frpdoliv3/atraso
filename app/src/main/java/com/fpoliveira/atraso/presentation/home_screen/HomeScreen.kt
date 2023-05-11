@@ -62,9 +62,9 @@ fun HomeScreen(
         Spacer(modifier = Modifier.height(8.dp))
         Button(
             modifier = Modifier.align(alignment = Alignment.End),
-            onClick = { navController.navigate(Screen.TrainScheduleDetailsScreen(trainNumberState.toInt(), trainDateState)) }
+            onClick = { navController.navigate(Screen.TrainScheduleDetailsScreen(trainNumberState, trainDateState)) }
         ) {
-            Text("Search")
+            Text(stringResource(R.string.home_train_search_action))
         }
     }
 }

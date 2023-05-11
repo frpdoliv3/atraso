@@ -9,5 +9,5 @@ sealed class Screen: Parcelable {
     object HomeScreen: Screen()
 
     @Parcelize
-    data class TrainScheduleDetailsScreen(val trainNumber: Int, val searchDate: ZonedDateTime): Screen()
+    data class TrainScheduleDetailsScreen(val trainNumber: String, val searchDate: ZonedDateTime): Screen()
 }

@@ -19,7 +19,7 @@ fun StopInfoDto.toStopData(): StopData {
     )
 }
 
-fun ScheduleDataDto.toScheduleInfo(): ScheduleInfo {
+fun ScheduleDataDto.toScheduleInfo(trainNumber: String): ScheduleInfo {
     val localDateTimeFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss")
 
     return ScheduleInfo(
@@ -37,6 +37,7 @@ fun ScheduleDataDto.toScheduleInfo(): ScheduleInfo {
         operator = operator,
         serviceType = serviceType,
         trainStatus = trainStatus,
+        trainNumber = trainNumber,
         trainPassageNodes = trainPassageNodes.map { it.toStopData() }
     )
 }

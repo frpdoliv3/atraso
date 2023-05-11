@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home_train_num_label">Train Number</string>
-    <string name="home_train_search_action">Search</string>
-    <string name="home_train_date_label">Date</string>
+    <string name="home_train_num_label">Número do Comboio</string>
+    <string name="home_train_search_action">Procurar</string>
+    <string name="home_train_date_label">Data da procura</string>
     <string name="home_train_date_format">E, dd/MM/yyyy</string>
 </resources>

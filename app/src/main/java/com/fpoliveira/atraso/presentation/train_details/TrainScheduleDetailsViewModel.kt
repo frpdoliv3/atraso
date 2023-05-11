@@ -16,7 +16,7 @@ import java.time.ZonedDateTime
 
 class TrainScheduleDetailsViewModel @AssistedInject constructor(
     private val scheduleRepository: ScheduleRepository,
-    @Assisted trainNumber: Int,
+    @Assisted trainNumber: String,
     @Assisted searchDate: ZonedDateTime
 ): ViewModel() {
     private val _scheduleState: MutableState<Resource<ScheduleInfo>> = mutableStateOf(Resource.Loading())
@@ -31,6 +31,6 @@ class TrainScheduleDetailsViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(@Assisted trainNumber: Int, @Assisted searchDate: ZonedDateTime): TrainScheduleDetailsViewModel
+        fun create(@Assisted trainNumber: String, @Assisted searchDate: ZonedDateTime): TrainScheduleDetailsViewModel
     }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="schedule_details_top_bar">Detalhes da rota: <b>%1$s</b></string>
+    <string name="schedule_details_status">Situação:</string>
+    <string name="schedule_details_departure_date">Data de partida:</string>
+    <string name="schedule_details_arrival_date">Data da chegada:</string>
+    <plurals name="schedule_details_time_plural">
+        <item quantity="one">%1$s <b>à</b> %2$s</item>
+        <item quantity="other">%1$s <b>às</b> %2$s</item>
+    </plurals>
+</resources>

@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
                         when(screen) {
                             is Screen.HomeScreen -> HomeScreen(navController)
                             is Screen.TrainScheduleDetailsScreen -> TrainScheduleDetailsScreen(
+                                navController,
                                 screen.trainNumber,
                                 screen.searchDate
                             )
