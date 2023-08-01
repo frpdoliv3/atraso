@@ -2,6 +2,10 @@ package com.fpoliveira.atraso.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val BlueCornflower = Color(0xFF0077B6)
+val RedCherry = Color(0xFFBC544B)
+val GreenEmerald = Color(0xFF028A0F)
+
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)

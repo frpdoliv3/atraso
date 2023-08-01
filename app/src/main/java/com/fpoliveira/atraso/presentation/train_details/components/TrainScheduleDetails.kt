@@ -59,7 +59,7 @@ fun TrainScheduleDetails (
                     scheduleInfo.destination
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                if (scheduleInfo.trainStatus.isNotEmpty())
+                if (scheduleInfo.trainStatus.isNotEmpty()) {
                     Column {
                         Text(
                             stringResource(R.string.schedule_details_status),
@@ -67,6 +67,11 @@ fun TrainScheduleDetails (
                         )
                         Text(scheduleInfo.trainStatus)
                     }
+                }
+                StopList(
+                    modifier = Modifier.padding(vertical = 16.dp),
+                    trainStopNodes = scheduleInfo.trainPassageNodes
+                )
             }
         }
     )
