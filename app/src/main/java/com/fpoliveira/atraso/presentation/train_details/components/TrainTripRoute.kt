@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.TripOrigin
 import androidx.compose.material3.Text
@@ -17,6 +18,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.unit.dp
 import com.fpoliveira.atraso.R
+import com.fpoliveira.atraso.presentation.ui.theme.BlueCornflower
+import com.fpoliveira.atraso.presentation.ui.theme.RedCherry
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
@@ -39,7 +42,7 @@ fun TrainTripRoute(
             Image(
                 Icons.Outlined.TripOrigin,
                 contentDescription = null,
-                colorFilter = ColorFilter.tint(Color.LightGray)
+                colorFilter = ColorFilter.tint(BlueCornflower)
             )
             Spacer(modifier = Modifier.width(iconTextSpacer))
             Text(pluralStringResource(
@@ -49,12 +52,16 @@ fun TrainTripRoute(
                 departureDate.format(formatter)
             ))
         }
-        Spacer(modifier = Modifier.height(8.dp))
+        Image(
+            Icons.Default.MoreVert,
+            contentDescription = null,
+            colorFilter = ColorFilter.tint(Color.LightGray)
+        )
         Row {
             Image(
                 Icons.Outlined.LocationOn,
                 contentDescription = null,
-                colorFilter = ColorFilter.tint(Color.LightGray)
+                colorFilter = ColorFilter.tint(RedCherry)
             )
             Spacer(modifier = Modifier.width(iconTextSpacer))
             Text(pluralStringResource(
