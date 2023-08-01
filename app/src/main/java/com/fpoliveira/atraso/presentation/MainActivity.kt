@@ -10,8 +10,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.fpoliveira.atraso.presentation.home_screen.HomeScreen
-import com.fpoliveira.atraso.presentation.train_details.TrainScheduleDetailsScreen
+import com.fpoliveira.atraso.feat_home.presentation.HomeScreen
+import com.fpoliveira.atraso.feat_route_details.presentation.train_details.TrainScheduleDetailsScreen
 import com.fpoliveira.atraso.presentation.ui.theme.AtrasoTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dev.olshevski.navigation.reimagined.AnimatedNavHost

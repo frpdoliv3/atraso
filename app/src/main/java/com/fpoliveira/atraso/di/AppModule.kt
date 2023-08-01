@@ -1,9 +1,10 @@
 package com.fpoliveira.atraso.di
 
 import android.content.Context
-import com.fpoliveira.atraso.data.remote.ScheduleApi
-import com.fpoliveira.atraso.data.repository.ScheduleRepositoryImpl
-import com.fpoliveira.atraso.domain.repository.ScheduleRepository
+import com.fpoliveira.atraso.feat_route_details.data.remote.ScheduleApi
+import com.fpoliveira.atraso.feat_route_details.data.remote.StationDetailsApi
+import com.fpoliveira.atraso.feat_route_details.data.repository.ScheduleRepositoryImpl
+import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,7 +28,16 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun provideStationDetailsApi(): StationDetailsApi = Retrofit.Builder()
+        .baseUrl("http://10.0.2.2:8080/api/v1/")
+        .addConverterFactory(MoshiConverterFactory.create())
+        .build()
+        .create()
+
+    @Provides
+    @Singleton
     fun provideScheduleRepository(
         @ApplicationContext context: Context,
-        api: ScheduleApi): ScheduleRepository = ScheduleRepositoryImpl(context, api)
+        api: ScheduleApi
+    ): ScheduleRepository = ScheduleRepositoryImpl(context, api)
 }
