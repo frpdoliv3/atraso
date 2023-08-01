@@ -2,7 +2,7 @@ package com.fpoliveira.atraso.feat_route_details.data.repository
 
 import android.content.Context
 import com.fpoliveira.atraso.feat_route_details.data.mappers.toScheduleInfo
-import com.fpoliveira.atraso.feat_route_details.data.remote.ScheduleApi
+import com.fpoliveira.atraso.feat_route_details.data.station_details_remote.ScheduleApi
 import com.fpoliveira.atraso.feat_route_details.domain.model.ScheduleInfo
 import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
 import com.fpoliveira.atraso.feat_route_details.domain.util.Resource

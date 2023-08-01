@@ -1,8 +1,8 @@
 package com.fpoliveira.atraso.di
 
 import android.content.Context
-import com.fpoliveira.atraso.feat_route_details.data.remote.ScheduleApi
-import com.fpoliveira.atraso.feat_route_details.data.remote.StationDetailsApi
+import com.fpoliveira.atraso.feat_route_details.data.station_details_remote.ScheduleApi
+import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.StationDetailsApi
 import com.fpoliveira.atraso.feat_route_details.data.repository.ScheduleRepositoryImpl
 import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
 import dagger.Module

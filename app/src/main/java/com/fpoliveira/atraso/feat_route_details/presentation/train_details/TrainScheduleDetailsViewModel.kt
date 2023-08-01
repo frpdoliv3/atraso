@@ -6,8 +6,8 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.fpoliveira.atraso.feat_route_details.data.remote.SearchLocationDataDto
-import com.fpoliveira.atraso.feat_route_details.data.remote.StationDetailsApi
+import com.fpoliveira.atraso.feat_route_details.data.station_details_remote.SearchLocationDataDto
+import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.StationDetailsApi
 import com.fpoliveira.atraso.feat_route_details.domain.model.ScheduleInfo
 import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
 import com.fpoliveira.atraso.feat_route_details.domain.util.Resource
@@ -17,8 +17,7 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import java.time.ZonedDateTime
 
-class TrainScheduleDetailsViewModel @AssistedInject constructor(
-    private val stationDetailsApi: StationDetailsApi,
+class TrainScheduleDetailsViewModel @AssistedInject constructor(,
     private val scheduleRepository: ScheduleRepository,
     @Assisted trainNumber: String,
     @Assisted searchDate: ZonedDateTime
@@ -28,25 +27,6 @@ class TrainScheduleDetailsViewModel @AssistedInject constructor(
 
     init {
         viewModelScope.launch {
-            val teste = stationDetailsApi.getStationDetails(listOf(
-                SearchLocationDataDto(
-                    name = "Guimarães",
-                    externalId = 9424000
-                ),
-                SearchLocationDataDto(
-                    name = "VIZELA",
-                    externalId = 9428233
-                ),
-                SearchLocationDataDto(
-                    name = "SANTO TIRSO",
-                    externalId = 9428068
-                ),
-                SearchLocationDataDto(
-                    name = "COIMBRA-B",
-                    externalId = 9436004
-                ),
-            ))
-            Log.d("STATION_LOCATIONS", teste.body().toString())
             val schedule = scheduleRepository.getSchedule(trainNumber, searchDate)
             _scheduleState.value = schedule
         }

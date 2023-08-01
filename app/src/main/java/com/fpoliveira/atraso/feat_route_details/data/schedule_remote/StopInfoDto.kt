@@ -1,4 +1,4 @@
-package com.fpoliveira.atraso.feat_route_details.data.remote
+package com.fpoliveira.atraso.feat_route_details.data.schedule_remote
 
 import com.squareup.moshi.Json
 

@@ -1,7 +1,7 @@
 package com.fpoliveira.atraso.feat_route_details.data.mappers
 
-import com.fpoliveira.atraso.feat_route_details.data.remote.ScheduleDataDto
-import com.fpoliveira.atraso.feat_route_details.data.remote.StopInfoDto
+import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.ScheduleDataDto
+import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.StopInfoDto
 import com.fpoliveira.atraso.feat_route_details.domain.model.ScheduleInfo
 import com.fpoliveira.atraso.feat_route_details.domain.model.StopData
 import java.time.LocalDateTime

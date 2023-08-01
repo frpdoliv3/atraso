@@ -1,4 +1,4 @@
-package com.fpoliveira.atraso.feat_route_details.data.remote
+package com.fpoliveira.atraso.feat_route_details.data.station_details_remote
 
 data class SearchLocationDataDto(
     val name: String,
