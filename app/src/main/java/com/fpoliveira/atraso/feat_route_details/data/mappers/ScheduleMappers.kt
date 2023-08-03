@@ -2,6 +2,8 @@ package com.fpoliveira.atraso.feat_route_details.data.mappers
 
 import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.ScheduleDataDto
 import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.StopInfoDto
+import com.fpoliveira.atraso.feat_route_details.data.station_details_remote.StationDto
+import com.fpoliveira.atraso.feat_route_details.domain.model.Location
 import com.fpoliveira.atraso.feat_route_details.domain.model.ScheduleInfo
 import com.fpoliveira.atraso.feat_route_details.domain.model.StopData
 import java.time.LocalDateTime
@@ -15,7 +17,8 @@ fun StopInfoDto.toStopData(): StopData {
         stationName = stationName,
         trainPassed = trainPassed,
         scheduledTime = LocalTime.parse(scheduledTime, DateTimeFormatter.ISO_LOCAL_TIME),
-        observations = observations
+        observations = observations,
+        externalId = stationId
     )
 }
 

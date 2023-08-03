@@ -4,7 +4,10 @@ import android.content.Context
 import com.fpoliveira.atraso.feat_route_details.data.station_details_remote.ScheduleApi
 import com.fpoliveira.atraso.feat_route_details.data.schedule_remote.StationDetailsApi
 import com.fpoliveira.atraso.feat_route_details.data.repository.ScheduleRepositoryImpl
+import com.fpoliveira.atraso.feat_route_details.data.repository.StationDetailsRepositoryImpl
 import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
+import com.fpoliveira.atraso.feat_route_details.domain.repository.StationDetailsRepository
+import com.fpoliveira.atraso.feat_route_details.use_case.GetRouteDetailsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,4 +43,18 @@ object AppModule {
         @ApplicationContext context: Context,
         api: ScheduleApi
     ): ScheduleRepository = ScheduleRepositoryImpl(context, api)
+
+    @Provides
+    @Singleton
+    fun provideStationRepository(
+        @ApplicationContext context: Context,
+        api: StationDetailsApi
+    ): StationDetailsRepository = StationDetailsRepositoryImpl(context, api)
+
+    @Provides
+    @Singleton
+    fun provideGetRouteDetailsUseCase(
+        scheduleRepository: ScheduleRepository,
+        stationRepository: StationDetailsRepository
+    ) = GetRouteDetailsUseCase(scheduleRepository, stationRepository)
 }

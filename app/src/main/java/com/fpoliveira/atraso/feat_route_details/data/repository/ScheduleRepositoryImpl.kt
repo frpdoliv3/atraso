@@ -15,7 +15,7 @@ class ScheduleRepositoryImpl (
 ): ScheduleRepository, BaseRepository(context) {
     override suspend fun getSchedule(trainNumber: String, searchDate: ZonedDateTime): Resource<ScheduleInfo> {
         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
-        return when(val result = safeApiCall { api.getTrainSchedule(trainNumber.toString(), searchDate.format(formatter)) }) {
+        return when(val result = safeApiCall { api.getTrainSchedule(trainNumber, searchDate.format(formatter)) }) {
             is Resource.Success -> Resource.Success(data = result.data!!.response.toScheduleInfo(trainNumber))
             is Resource.Loading -> Resource.Loading()
             is Resource.Error -> Resource.Error(errorMessage = result.message!!)

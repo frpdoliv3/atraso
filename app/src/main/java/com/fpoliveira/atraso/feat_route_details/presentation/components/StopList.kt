@@ -1,4 +1,4 @@
-package com.fpoliveira.atraso.feat_route_details.presentation.train_details.components
+package com.fpoliveira.atraso.feat_route_details.presentation.text_train_details.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.fpoliveira.atraso.feat_route_details.domain.model.StopData
+import com.fpoliveira.atraso.feat_route_details.presentation.components.Stop
 import com.fpoliveira.atraso.presentation.ui.theme.GreenEmerald
 
 

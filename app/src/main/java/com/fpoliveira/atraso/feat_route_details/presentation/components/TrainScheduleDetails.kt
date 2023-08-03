@@ -1,5 +1,6 @@
-package com.fpoliveira.atraso.feat_route_details.presentation.train_details.components
+package com.fpoliveira.atraso.feat_route_details.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.fpoliveira.atraso.R
 import com.fpoliveira.atraso.feat_route_details.domain.model.ScheduleInfo
+import com.fpoliveira.atraso.feat_route_details.presentation.text_train_details.components.StopList
+import com.fpoliveira.atraso.feat_route_details.presentation.text_train_details.components.TrainTripRoute
 import com.fpoliveira.atraso.presentation.Screen
 import dev.olshevski.navigation.reimagined.NavController
 import dev.olshevski.navigation.reimagined.pop

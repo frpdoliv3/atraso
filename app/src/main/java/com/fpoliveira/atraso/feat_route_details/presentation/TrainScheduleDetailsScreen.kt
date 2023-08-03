@@ -1,4 +1,4 @@
-package com.fpoliveira.atraso.feat_route_details.presentation.train_details
+package com.fpoliveira.atraso.feat_route_details.presentation
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.EaseIn
@@ -9,8 +9,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.fpoliveira.atraso.feat_route_details.domain.util.Resource
 import com.fpoliveira.atraso.presentation.Screen
-import com.fpoliveira.atraso.feat_route_details.presentation.train_details.components.Loading
-import com.fpoliveira.atraso.feat_route_details.presentation.train_details.components.TrainScheduleDetails
+import com.fpoliveira.atraso.feat_route_details.presentation.text_train_details.components.Loading
+import com.fpoliveira.atraso.feat_route_details.presentation.components.TrainScheduleDetails
 import com.fpoliveira.atraso.viewModelEntryPoint
 import dev.olshevski.navigation.reimagined.NavController
 import java.time.ZonedDateTime

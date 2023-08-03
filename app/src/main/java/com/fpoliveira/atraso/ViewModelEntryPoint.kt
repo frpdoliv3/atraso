@@ -2,7 +2,7 @@ package com.fpoliveira.atraso
 
 import android.content.Context
 import com.fpoliveira.atraso.feat_home.presentation.HomeScreenViewModel
-import com.fpoliveira.atraso.feat_route_details.presentation.train_details.TrainScheduleDetailsViewModel
+import com.fpoliveira.atraso.feat_route_details.presentation.TrainScheduleDetailsViewModel
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
