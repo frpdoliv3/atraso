@@ -30,6 +30,9 @@ class TrainScheduleDetailsViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(@Assisted trainNumber: String, @Assisted searchDate: ZonedDateTime): TrainScheduleDetailsViewModel
+        fun create(
+            @Assisted trainNumber: String,
+            @Assisted searchDate: ZonedDateTime
+        ): TrainScheduleDetailsViewModel
     }
 }

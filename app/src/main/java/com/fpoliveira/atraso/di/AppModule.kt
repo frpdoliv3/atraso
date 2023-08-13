@@ -7,7 +7,10 @@ import com.fpoliveira.atraso.feat_route_details.data.repository.ScheduleReposito
 import com.fpoliveira.atraso.feat_route_details.data.repository.StationDetailsRepositoryImpl
 import com.fpoliveira.atraso.feat_route_details.domain.repository.ScheduleRepository
 import com.fpoliveira.atraso.feat_route_details.domain.repository.StationDetailsRepository
+import com.fpoliveira.atraso.feat_route_details.use_case.FetchLocationUseCase
 import com.fpoliveira.atraso.feat_route_details.use_case.GetRouteDetailsUseCase
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,4 +60,11 @@ object AppModule {
         scheduleRepository: ScheduleRepository,
         stationRepository: StationDetailsRepository
     ) = GetRouteDetailsUseCase(scheduleRepository, stationRepository)
+
+    @Provides
+    @Singleton
+    fun provideFetchLocationUseCase(@ApplicationContext context: Context): FetchLocationUseCase {
+        val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
+        return FetchLocationUseCase(context, fusedLocationClient)
+    }
 }
