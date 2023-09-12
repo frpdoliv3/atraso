@@ -231,7 +231,7 @@ fun TrainScheduleDetailsMapScreen(
                         .padding(horizontal = 24.dp) //Used to make bar distant from the parent
                         .padding(top = 24.dp)
                         .clip(RoundedCornerShape(48.dp))
-                        .background(Color.Red)
+                        .background(MaterialTheme.colorScheme.primaryContainer)
                 ) {
                     IconButton(onClick = { navController.pop() }) {
                         Icon(Icons.Filled.ArrowBack, contentDescription = null)
@@ -244,7 +244,10 @@ fun TrainScheduleDetailsMapScreen(
                         color = Color.Black
                     )
                     Column(
-                        modifier = Modifier.padding(start = 4.dp)
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(start = 4.dp),
+                        verticalArrangement = Arrangement.Center
                     ) {
                         Text(viewModel.nextStopNotice.value)
                         if (scheduleInfo.trainStatus.isNotEmpty()) {
